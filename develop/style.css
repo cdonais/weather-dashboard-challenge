@@ -8,3 +8,17 @@ h1{
     background-size: cover;
     background-position: 50%;
 }
+
+#uvIndex{
+    padding: 5px;
+}
+
+.low{
+    background-color: rgb(14, 204, 14);
+}
+.medium{
+    background-color: yellow;
+}
+.high{
+    background-color: red;
+}
