@@ -8,6 +8,12 @@ h1{
     background-size: cover;
     background-position: 50%;
 }
+h2, h3, h4{
+    font-family: 'russo one', sans-serif;
+}
+.card{
+    background-color: rgb(215, 219, 223);
+}
 
 #uvIndex{
     padding: 5px;
@@ -23,6 +29,6 @@ h1{
     background-color: red;
 }
 
-#weatherIcon {
+.icon {
     max-width: fit-content;
 }

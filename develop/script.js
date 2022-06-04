@@ -89,9 +89,9 @@ var searchButton=document.getElementById('searchButton');
          console.log(uvIndexEl);
 
          currentDate.textContent='Date: ' + currentDateEl;
-         tempText.textContent='Temperature: ' + tempEl; 
-         windText.textContent='Wind: ' + windEl;
-         humidityText.textContent='Humidity: ' + humidityEl;
+         tempText.textContent='Temperature: ' + tempEl + '°F';
+         windText.textContent='Wind: ' + windEl + 'MPH';
+         humidityText.textContent='Humidity: ' + humidityEl + '%';
          conditionsText.textContent='Conditions: ' + conditionsEl;
          uvIndex.textContent='UV Index: ' + uvIndexEl;
 
@@ -108,17 +108,35 @@ var searchButton=document.getElementById('searchButton');
          date4.textContent=date4El;
          date5.textContent=date5El;
 
+          var weatherIcon1=document.getElementById('weatherIcon1');
+         var weatherIcon2=document.getElementById('weatherIcon2');
+         var weatherIcon3=document.getElementById('weatherIcon3');
+         var weatherIcon4=document.getElementById('weatherIcon4');
+         var weatherIcon5=document.getElementById('weatherIcon5');
+
+         var weatherIcon1El=data.daily[1].weather[0].icon;
+         weatherIcon1.setAttribute('src', 'http://openweathermap.org/img/wn/'+ weatherIcon1El+ '@2x.png')
+         var weatherIcon2El=data.daily[2].weather[0].icon;
+         weatherIcon2.setAttribute('src', 'http://openweathermap.org/img/wn/'+ weatherIcon2El+ '@2x.png')
+         var weatherIcon3El=data.daily[3].weather[0].icon;
+         weatherIcon3.setAttribute('src', 'http://openweathermap.org/img/wn/'+ weatherIcon3El+ '@2x.png')
+         var weatherIcon4El=data.daily[4].weather[0].icon;
+         weatherIcon4.setAttribute('src', 'http://openweathermap.org/img/wn/'+ weatherIcon4El+ '@2x.png')
+         var weatherIcon5El=data.daily[5].weather[0].icon;
+         weatherIcon5.setAttribute('src', 'http://openweathermap.org/img/wn/'+ weatherIcon5El+ '@2x.png')
+
+
          var temp1El=data.daily[1].temp.day;
          var temp2El=data.daily[2].temp.day;
          var temp3El=data.daily[3].temp.day;
          var temp4El=data.daily[4].temp.day;
          var temp5El=data.daily[5].temp.day;
 
-         temp1.textContent='Temperature: '+ temp1El;
-         temp2.textContent='Temperature: '+ temp2El;
-         temp3.textContent='Temperature: '+ temp3El;
-         temp4.textContent='Temperature: '+ temp4El;
-         temp5.textContent='Temperature: '+ temp5El;
+         temp1.textContent='Temperature: '+ temp1El+'°F';
+         temp2.textContent='Temperature: '+ temp2El+'°F';
+         temp3.textContent='Temperature: '+ temp3El+'°F';
+         temp4.textContent='Temperature: '+ temp4El+'°F';
+         temp5.textContent='Temperature: '+ temp5El+'°F';
 
          var wind1El=data.daily[1].wind_speed;
          var wind2El=data.daily[2].wind_speed;
@@ -126,11 +144,11 @@ var searchButton=document.getElementById('searchButton');
          var wind4El=data.daily[4].wind_speed;
          var wind5El=data.daily[5].wind_speed;
 
-         wind1.textContent='Wind: '+ wind1El;
-         wind2.textContent='Wind: '+ wind2El;
-         wind3.textContent='Wind: '+ wind3El;
-         wind4.textContent='Wind: '+ wind4El;
-         wind5.textContent='Wind: '+ wind5El;
+         wind1.textContent='Wind: '+ wind1El+ 'MPH';
+         wind2.textContent='Wind: '+ wind2El+ 'MPH';
+         wind3.textContent='Wind: '+ wind3El+'MPH';
+         wind4.textContent='Wind: '+ wind4El+'MPH';
+         wind5.textContent='Wind: '+ wind5El+'MPH';
 
          var humid1El=data.daily[1].humidity;
          var humid2El=data.daily[2].humidity;
@@ -138,11 +156,11 @@ var searchButton=document.getElementById('searchButton');
          var humid4El=data.daily[4].humidity;
          var humid5El=data.daily[5].humidity;
 
-         humid1.textContent='Humidity: '+ humid1El;
-         humid2.textContent='Humidity: '+ humid2El;
-         humid3.textContent='Humidity: '+ humid3El;
-         humid4.textContent='Humidity: '+ humid4El;
-         humid5.textContent='Humidity: '+ humid5El;
+         humid1.textContent='Humidity: '+ humid1El+ '%';
+         humid2.textContent='Humidity: '+ humid2El+ '%';
+         humid3.textContent='Humidity: '+ humid3El+ '%';
+         humid4.textContent='Humidity: '+ humid4El+ '%';
+         humid5.textContent='Humidity: '+ humid5El+ '%';
 
 
 
