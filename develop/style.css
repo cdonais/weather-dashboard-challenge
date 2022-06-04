@@ -10,6 +10,7 @@ h1{
 }
 h2, h3, h4{
     font-family: 'russo one', sans-serif;
+    text-align: center;
 }
 .card{
     background-color: rgb(215, 219, 223);
@@ -31,4 +32,8 @@ h2, h3, h4{
 
 .icon {
     max-width: fit-content;
+}
+.history-button{
+    background-color: darkgray;
+    color: white;
 }

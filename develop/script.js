@@ -30,17 +30,18 @@ var searchButton=document.getElementById('searchButton');
    var currentDateEl=moment().format('MMMM Do, YYYY');  
    var weatherIcon=document.getElementById('weatherIcon'); 
 
+
    var apikey='041f42dffbaa5c5ba881461d212efe79'
-   
+
    
       function fetchWeather(){
          var city=searchBox.value;
          console.log(city);
          cityName.textContent='City: '+city;
-
+      
+      
          var cityUrl='http://api.openweathermap.org/geo/1.0/direct?q='+ city +'&limit=5&appid=' + apikey;
-
-        
+      
             fetch(cityUrl)
             .then((response) =>{
                return response.json();
@@ -163,20 +164,25 @@ var searchButton=document.getElementById('searchButton');
          humid5.textContent='Humidity: '+ humid5El+ '%';
 
 
+            
+
 
       
+            
+
+      var searchHistory=document.getElementById('searchHistory');
+
+      localStorage.setItem('City', JSON.stringify(city))
+      var searchedCity=document.createElement("button");
+         searchedCity.setAttribute('class', 'history-button');
+         searchedCity.innerHTML=city
+         searchHistory.append(searchedCity);
+         searchedCity.addEventListener('click', fetchWeather);
 
       })
-            }
-            )};
-   
-   
+   }
+   )};
 
-   
-         
- 
             searchButton.addEventListener('click',fetchWeather);
 
-     
       
-fetchWeather();

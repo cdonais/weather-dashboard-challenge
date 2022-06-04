@@ -12,13 +12,16 @@
     <header class="text-center">
         <h1>WEATHER DASHBOARD</h1>
     </header>
-    <section class="row">
+    <div class="row">
         <div class="card col">
             <h2>Search for a City:</h2>
             <input id=searchBox type="text" placeholder="Search..">
             <button id="searchButton" class=button type="submit">Search</button>
+            
+            <div id="searchHistory">
             </div>
         </div>
+       
         <div class="card col">
         <h3 id="cityName">City: </h3>
         <h4 id="currentDate">Date: </h4>
@@ -29,7 +32,7 @@
             <p id="conditions">Weather Conditions:</p> 
             <p id="uvIndex">UV Index:</p>    
         </div>
-    </section>
+    </div>
     <div class="card col-12">
         <h2>5 Day Forecast</h2>
         <div class="row ">
