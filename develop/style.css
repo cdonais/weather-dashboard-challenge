@@ -22,3 +22,7 @@ h1{
 .high{
     background-color: red;
 }
+
+#weatherIcon {
+    max-width: fit-content;
+}

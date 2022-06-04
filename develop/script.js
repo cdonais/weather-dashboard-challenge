@@ -1,8 +1,7 @@
  var searchBox=document.getElementById("searchBox");
- var city=searchBox.value;
-//var searchButton=document.getElementById(searchButton);
-//searchButton.addEventListener('click', fetchWeather);
+var searchButton=document.getElementById('searchButton');
    var currentDate=document.getElementById('currentDate');
+   var cityName=document.getElementById('cityName');
    var tempText=document.getElementById('temp');
    var windText=document.getElementById('wind');
    var humidityText=document.getElementById('humidity');
@@ -32,10 +31,14 @@
    var weatherIcon=document.getElementById('weatherIcon'); 
 
    var apikey='041f42dffbaa5c5ba881461d212efe79'
-   var cityUrl='http://api.openweathermap.org/geo/1.0/direct?q=Orlando&limit=5&appid=' + apikey;
    
    
       function fetchWeather(){
+         var city=searchBox.value;
+         console.log(city);
+         cityName.textContent='City: '+city;
+
+         var cityUrl='http://api.openweathermap.org/geo/1.0/direct?q='+ city +'&limit=5&appid=' + apikey;
 
         
             fetch(cityUrl)
@@ -154,10 +157,8 @@
    
          
  
- 
+            searchButton.addEventListener('click',fetchWeather);
+
      
-    //  function search(){
-    //      this.fetchWeather(document.querySelector("#city").value)
-    //  }
       
 fetchWeather();
